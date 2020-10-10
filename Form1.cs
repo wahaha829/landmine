@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms; //Click事件要匯入這個命名空間
+using System.Windows.Forms; //1234
 
 namespace landmine
 {
