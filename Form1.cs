@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms; //666
+using System.Windows.Forms; 
 
 namespace landmine
 {
@@ -62,8 +62,10 @@ namespace landmine
                     }
                     if (findout_landmines() == countlandmines() && countlandmines() == countflags())
                     {
-                    //插旗數=找出正確定雷數=地雷數總和
+                        //插旗數=找出正確定雷數=地雷數總和
+                        timer_stop(); //掃雷完成停止計時
                         MessageBox.Show("Well done!");
+                        
                     }
                 }
 
@@ -149,7 +151,8 @@ namespace landmine
             }
             label2.Text = "地雷數量 " + countlandmines();
             count_all_landmines_around();
-            this.date1 = DateTime.Now; //開始計時
+            this.date1 = DateTime.Now; //設定起始時間
+            timer_start(); //開始計時
         }
         private static void showbuttons()
         {
